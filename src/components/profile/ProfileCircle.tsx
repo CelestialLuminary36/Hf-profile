@@ -1,15 +1,16 @@
-import { OrbitingCircles } from "./magicui/orbiting-circles";
-import ProfileCard from "./profile/ProfileCard";
+import { OrbitingCircles } from "../magicui/orbiting-circles";
+import ProfileCard from "./ProfileCard";
+import avatar from "@/assets/svg/dog.svg"
 
 export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={50}>
-        <Icons.whatsapp />
+        <Icons.avatar />
+        {/* <Icons.whatsapp /> */}
         <Icons.notion />
         <Icons.openai />
         <Icons.googleDrive />
-        <Icons.whatsapp />
       </OrbitingCircles>
       <ProfileCard />
     </div>
@@ -17,6 +18,9 @@ export function OrbitingCirclesDemo() {
 }
 
 const Icons = {
+  avatar: () => (
+    <img src={avatar} alt="My Icon" width={175} height={175} className="rounded-full"/>
+  ),
   gitHub: () => (
     <svg width="100" height="100" viewBox="0 0 438.549 438.549">
       <path

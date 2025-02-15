@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-import { OrbitingCirclesDemo } from './components/demo'
+import { OrbitingCirclesDemo } from './components/profile/ProfileCircle'
+import { ProjectCard } from './components/projects/ProjectCard';
+import { BentoGridDemo } from './components/skills/Skills'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <OrbitingCirclesDemo />
-    </>
-  )
+    <div className="bg-gray-100">
+      {/* 内容将变得可滚动 */}
+      <OrbitingCirclesDemo />
+      <BentoGridDemo />
+      <ProjectCard />
+    </div>
+  );
 }
+
 
 export default App

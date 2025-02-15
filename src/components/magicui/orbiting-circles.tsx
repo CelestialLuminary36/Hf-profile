@@ -19,7 +19,7 @@ export function OrbitingCircles({
   children,
   reverse,
   duration = 20,
-  radius = 185,
+  radius = 250,
   path = true,
   iconSize = 30,
   speed = 1,
@@ -45,14 +45,18 @@ export function OrbitingCircles({
       )}
       {React.Children.map(children, (child, index) => {
         const angle = (360 / React.Children.count(children)) * index;
+        const isFirst = index === 0;
+
         return (
           <div
             style={
               {
-                "--duration": calculatedDuration,
+                "--duration": isFirst ? 10 : calculatedDuration,
                 "--radius": radius,
                 "--angle": angle,
-                "--icon-size": `${iconSize}px`,
+                "--icon-size": `${isFirst ? 250 : iconSize}px`,
+                "--translate-z": isFirst ? "50px" : "0",
+                zIndex: isFirst ? 1 : 0,
               } as React.CSSProperties
             }
             className={cn(
