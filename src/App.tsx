@@ -1,8 +1,9 @@
 import './App.css'
 
 import { OrbitingCirclesDemo } from './components/profile/ProfileCircle'
-import { ProjectCard } from './components/projects/ProjectCard';
+import { ExampleProjects } from './components/projects/Projects';
 import { BentoGridDemo } from './components/skills/Skills'
+
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       {/* 内容将变得可滚动 */}
       <OrbitingCirclesDemo />
       <BentoGridDemo />
-      <ProjectCard />
+      <ExampleProjects />
     </div>
   );
 }
