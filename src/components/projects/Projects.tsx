@@ -35,13 +35,14 @@ const exampleProjects = [
 
 export function ExampleProjects() {
     return (
-      <div className="w-3/5 mx-auto flex flex-col items-center justify-center bg-white p-20 rounded-2xl shadow-lg my-40">
+      <div className="w-full sm:w-3/5 mx-auto flex flex-col items-center justify-center bg-white p-20 rounded-2xl shadow-lg my-40">
         {/* "我做过的项目" 标题 */}
         <div className="bg-black rounded-3xl shadow-lg mb-8 p-2">
-        <p className="text-sm font-bold text-center text-white">我做过的</p>
-      </div>
+          <p className="text-sm font-bold text-center text-white">我做过的</p>
+        </div>
   
-        <div className="flex flex-wrap justify-center gap-4">
+        {/* 项目卡片显示区域 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
           {exampleProjects.map((project, index) => (
             <ProjectCard
               key={index}
@@ -55,4 +56,5 @@ export function ExampleProjects() {
       </div>
     );
   }
+  
   
