@@ -8,31 +8,40 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import java from "../../assets/svg/java-svgrepo-com.svg";
-import spring from "@/assets/svg/spring.svg"
-import mysql from "@/assets/svg/mysql.svg"
-import golang from "@/assets/svg/golang.svg"
-import redis from "@/assets/svg/redis.svg"
-import study from "@/assets/svg/study.svg"
-import react from "@/assets/react.svg"
+import spring from "@/assets/svg/spring.svg";
+import mysql from "@/assets/svg/mysql.svg";
+import golang from "@/assets/svg/golang.svg";
+import redis from "@/assets/svg/redis.svg";
+import study from "@/assets/svg/study.svg";
+import react from "@/assets/react.svg";
 
 export function BentoGridDemo() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto mt-64">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          icon={item.icon}
-          className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} `}
-        />
-      ))}
-    </BentoGrid>
+    <div className="w-3/5 mx-auto bg-white p-20 rounded-2xl shadow-lg mt-60 flex flex-col items-center">
+      {/* 技术栈标题 */}
+      <div className="bg-black rounded-3xl shadow-lg mb-8 p-2">
+        <p className="text-sm font-bold text-center text-white">我掌握的</p>
+        </div>
+
+      <BentoGrid className="max-w-4xl mx-auto">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            icon={item.icon}
+            className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} `}
+          />
+        ))}
+      </BentoGrid>
+    </div>
   );
 }
+
+
 const Skeleton: React.FC<{ path: string }> = ({ path }) => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-white from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
     <div className="flex justify-center items-center w-full h-full">
       <img
         src={path}
@@ -42,7 +51,6 @@ const Skeleton: React.FC<{ path: string }> = ({ path }) => (
     </div>
   </div>
 );
-
 
 const items = [
   {
@@ -65,8 +73,7 @@ const items = [
   },
   {
     title: "Spring框架",
-    description:
-      "完全掌握",
+    description: "完全掌握",
     header: <Skeleton path={spring} />,
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },

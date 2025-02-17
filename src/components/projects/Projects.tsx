@@ -35,16 +35,24 @@ const exampleProjects = [
 
 export function ExampleProjects() {
     return (
-        <div className="py-40 flex flex-wrap justify-center gap-4">
-            {exampleProjects.map((project, index) => (
-                <ProjectCard
-                    key={index}
-                    projectName={project.projectName}
-                    projectDescription={project.projectDescription}
-                    imagePath={project.imagePath}
-                    projectLink={project.projectLink}
-                />
-            ))}
+      <div className="w-3/5 mx-auto flex flex-col items-center justify-center bg-white p-20 rounded-2xl shadow-lg my-40">
+        {/* "我做过的项目" 标题 */}
+        <div className="bg-black rounded-3xl shadow-lg mb-8 p-2">
+        <p className="text-sm font-bold text-center text-white">我做过的</p>
+      </div>
+  
+        <div className="flex flex-wrap justify-center gap-4">
+          {exampleProjects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              projectName={project.projectName}
+              projectDescription={project.projectDescription}
+              imagePath={project.imagePath}
+              projectLink={project.projectLink}
+            />
+          ))}
         </div>
+      </div>
     );
-}
+  }
+  

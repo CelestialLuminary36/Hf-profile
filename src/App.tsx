@@ -1,4 +1,7 @@
 import './App.css'
+import { ButtomDock } from './components/dock/ButtomDock';
+import { FilmTelevisionMarquee } from './components/filmTelevisions/FilmTelevision';
+import { GameMarquee3D } from './components/games/Games';
 
 import { OrbitingCirclesDemo } from './components/profile/ProfileCircle'
 import { ExampleProjects } from './components/projects/Projects';
@@ -12,6 +15,9 @@ function App() {
       <OrbitingCirclesDemo />
       <BentoGridDemo />
       <ExampleProjects />
+      <GameMarquee3D />
+      <FilmTelevisionMarquee />
+      <ButtomDock />
     </div>
   );
 }

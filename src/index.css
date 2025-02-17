@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* App.css 或者 ButtomDock 组件的样式文件中 */
+.fixed-bottom-center {
+    position: fixed;
+    bottom: 20px; /* 控制离底部的距离 */
+    left: 50%;
+    transform: translateX(-50%); /* 使其水平居中 */
+    z-index: 999; /* 确保它位于页面内容之上 */
+  }
+  
