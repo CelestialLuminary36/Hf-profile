@@ -90,7 +90,7 @@ const items = [
     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Skills",
+    title: "Continuous Learning ......",
     header: <Skeleton path={study} />,
   },
 ];

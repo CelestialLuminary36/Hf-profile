@@ -6,6 +6,8 @@ import { GameMarquee3D } from '@/components/games/Games';
 import { OrbitingCirclesDemo } from '@/components/profile/ProfileCircle'
 import { ExampleProjects } from '@/components/projects/Projects';
 import { BentoGridDemo } from '@/components/skills/Skills'
+import { AnimatedPin } from './components/skills/SkillsCard';
+import { MyProjects } from './components/skills/SkillsTemplate';
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
       <ExampleProjects />
       <GameMarquee3D />
       <FilmTelevisionMarquee />
+      <MyProjects />
       <ButtomDock />
       <div className='h-40'></div>
     </div>
