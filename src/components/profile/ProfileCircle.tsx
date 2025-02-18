@@ -1,13 +1,12 @@
 import { OrbitingCircles } from "../magicui/orbiting-circles";
 import ProfileCard from "./ProfileCard";
-import avatar from "@/assets/images/avatar.webp"
+import avatar from "/avatar-modified.svg"
 
 export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={50}>
         <Icons.avatar />
-        {/* <Icons.whatsapp /> */}
         <Icons.notion />
         <Icons.openai />
         <Icons.googleDrive />

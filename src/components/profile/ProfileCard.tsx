@@ -19,10 +19,10 @@ const ProfileCard = () => {
           </span>
           {/* <p className="card_description"> */}
           <ul className="card_description list-disc pl-5 mt-3 space-y-2 text-left">
-            <li>技术栈: Java, Go, React</li>
-            <li>人格: INFJ</li>
-            <li>兴趣: 游戏、技术探索</li>
+            <li>职业: Java后端开发</li>
+            <li>兴趣: 探索新技术、游戏</li>
             <li>目标: 独立开发，探索新技术</li>
+            <li>人格: INFJ</li>
           </ul>
           {/* </p> */}
         </div>
