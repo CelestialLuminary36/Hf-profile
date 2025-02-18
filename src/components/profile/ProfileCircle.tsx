@@ -1,6 +1,6 @@
 import { OrbitingCircles } from "../magicui/orbiting-circles";
 import ProfileCard from "./ProfileCard";
-import avatar from "@/assets/svg/dog.svg"
+import avatar from "@/assets/images/avatar.webp"
 
 export function OrbitingCirclesDemo() {
   return (

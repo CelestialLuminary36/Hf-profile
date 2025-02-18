@@ -1,11 +1,11 @@
 import './App.css'
-import { ButtomDock } from './components/dock/ButtomDock';
-import { FilmTelevisionMarquee } from './components/filmTelevisions/FilmTelevision';
-import { GameMarquee3D } from './components/games/Games';
+import { ButtomDock } from '@/components/docks/ButtomDock';
+import { FilmTelevisionMarquee } from '@/components/filmTelevisions/FilmTelevision';
+import { GameMarquee3D } from '@/components/games/Games';
 
-import { OrbitingCirclesDemo } from './components/profile/ProfileCircle'
-import { ExampleProjects } from './components/projects/Projects';
-import { BentoGridDemo } from './components/skills/Skills'
+import { OrbitingCirclesDemo } from '@/components/profile/ProfileCircle'
+import { ExampleProjects } from '@/components/projects/Projects';
+import { BentoGridDemo } from '@/components/skills/Skills'
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       <GameMarquee3D />
       <FilmTelevisionMarquee />
       <ButtomDock />
+      <div className='h-40'></div>
     </div>
   );
 }

@@ -1,72 +1,75 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import genshin from "@/assets/images/genshin.png";
-import starRail from "@/assets/images/starRail.png";
-import zzz from "@/assets/images/zzz.png";
-import ll from "@/assets/images/League_of_Legends.png";
-import pubg from "@/assets/images/pubg.png";
-import csgo from "@/assets/images/csgo.png";
-import rdr from "@/assets/images/Red_Dead_Redemption_2.jpg";
-import naraka from "@/assets/images/naraka.webp";
-import overwatch from "@/assets/svg/overwatch_2.svg";
+import Genshin_Impact from "@/assets/images/games/Genshin_Impact.png";
+import Honkai_Star_Rail from "@/assets/images/games/Honkai_Star_Rail.png";
+import Zenless_Zone_Zero from "@/assets/images/games/Zenless_Zone_Zero.png";
+import League_of_Legends from "@/assets/images/games/League_of_Legends.png";
+import PUBG from "@/assets/svg/games/PUBG.svg";
+import Counter_Strike_Global_Offensive from "@/assets/images/games/Counter_Strike_Global_Offensive.png";
+import Red_Dead_Redemption_2 from "@/assets/images/games/Red_Dead_Redemption_2.jpg";
+import NARAKA_BLADEPOINT from "@/assets/images/games/NARAKA_BLADEPOINT.webp";
+import Overwatch from "@/assets/svg/games/Overwatch.svg";
+import Crossfire from "@/assets/images/games/Crossfire.png"
+import League_of_Legends_Wild_Rift from "@/assets/images/games/League_of_Legends_Wild_Rift.png"
+import Naruto_Mobile from "@/assets/images/games/Naruto_Mobile.jpg"
 
 const game_2d_reviews = [
   {
     name: "Genshin Impact",
-    img: genshin,
+    img: Genshin_Impact,
   },
   {
     name: "Honkai: Star Rail",
-    img: starRail,
+    img: Honkai_Star_Rail,
   },
   {
     name: "Zenless Zone Zero",
-    img: zzz,
+    img: Zenless_Zone_Zero,
   },
 ];
 
 const game_online_reviews = [
   {
     name: "League of Legends",
-    img: ll,
+    img: League_of_Legends,
   },
   {
     name: "PUBG",
-    img: pubg,
+    img: PUBG,
   },
   {
     name: "Counter-Strike: Global Offensive",
-    img: csgo,
+    img: Counter_Strike_Global_Offensive,
   },
 ];
 
 const game_other_reviews = [
   {
     name: "Red Dead Redemption 2",
-    img: rdr,
+    img: Red_Dead_Redemption_2,
   },
   {
     name: "NARAKA:BLADEPOINT",
-    img: naraka,
+    img: NARAKA_BLADEPOINT,
   },
   {
     name: "Overwatch",
-    img: overwatch,
+    img: Overwatch,
   },
 ];
 
 const game_mixed_reviews = [
   {
-    name: "Genshin Impact",
-    img: genshin,
+    name: "Crossfire",
+    img: Crossfire,
   },
   {
-    name: "NARAKA:BLADEPOINT",
-    img: naraka,
+    name: "League of Legends: Wild Rift",
+    img: League_of_Legends_Wild_Rift,
   },
   {
-    name: "Counter-Strike: Global Offensive",
-    img: csgo,
+    name: "Naruto Mobile",
+    img: Naruto_Mobile,
   },
 ];
 

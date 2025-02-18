@@ -7,13 +7,13 @@ import {
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";
-import java from "../../assets/svg/java-svgrepo-com.svg";
-import spring from "@/assets/svg/spring.svg";
-import mysql from "@/assets/svg/mysql.svg";
-import golang from "@/assets/svg/golang.svg";
-import redis from "@/assets/svg/redis.svg";
-import study from "@/assets/svg/study.svg";
-import react from "@/assets/react.svg";
+import java from "../../assets/svg/skills/java.svg";
+import spring from "@/assets/svg/skills/spring.svg";
+import mysql from "@/assets/svg/skills/mysql.svg";
+import golang from "@/assets/svg/skills/golang.svg";
+import redis from "@/assets/svg/skills/redis.svg";
+import study from "@/assets/svg/skills/study.svg";
+import react from "@/assets/svg/skills/react.svg";
 
 export function BentoGridDemo() {
   return (

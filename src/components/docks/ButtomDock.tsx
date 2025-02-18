@@ -62,100 +62,93 @@ const Icons = {
 };
 
 const DATA = {
-  navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
-  ],
-  contact: {
-    social: {
-      GitHub: {
-        name: "GitHub",
-        url: "#",
-        icon: Icons.github,
-      },
-      LinkedIn: {
-        name: "LinkedIn",
-        url: "#",
-        icon: Icons.linkedin,
-      },
-      X: {
-        name: "X",
-        url: "#",
-        icon: Icons.x,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
+    navbar: [
+      { href: "/", icon: HomeIcon, label: "Home" },  // 首页路径
+      { href: "/blog", icon: PencilIcon, label: "Blog" },  // 博客页面路径
+    ],
+    contact: {
+      social: {
+        GitHub: {
+          name: "GitHub",
+          url: "https://github.com/CelestialLuminary36",  // GitHub 跳转 URL
+          icon: Icons.github,
+        },
+        LinkedIn: {
+          name: "LinkedIn",
+          url: "https://linkedin.com",  // LinkedIn 跳转 URL
+          icon: Icons.linkedin,
+        },
+        X: {
+          name: "X",
+          url: "https://twitter.com",  // X (Twitter) 跳转 URL
+          icon: Icons.x,
+        },
+        email: {
+          name: "Send Email",
+          url: "mailto:example@example.com",  // 邮件链接
+          icon: Icons.email,
+        },
       },
     },
-  },
-};
+  };
 
-export function ButtomDock() {
-  return (
-    <div className="flex flex-col items-center justify-center fixed-bottom-center">
-      {/* <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Dock
-      </span> */}
-      <TooltipProvider>
-        <Dock direction="middle" className="bg-white rounded-full">
-          {DATA.navbar.map((item) => (
-            <DockIcon key={item.label} className="hover:bg-gray-200">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    to={item.href}
-                    aria-label={item.label}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
-                    )}
-                  >
-                    <item.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{item.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          <Separator orientation="vertical" className="h-full" />
-          {Object.entries(DATA.contact.social).map(([name, social]) => (
-            <DockIcon key={name} className="hover:bg-gray-200">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    to={social.url}
-                    aria-label={social.name}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-          <Separator orientation="vertical" className="h-full py-2" />
-          {/* <DockIcon>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <ModeToggle />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Theme</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon> */}
-        </Dock>
-      </TooltipProvider>
-    </div>
-  );
-}
+  export function ButtomDock() {
+    return (
+      <div className="flex flex-col items-center justify-center fixed-bottom-center">
+        <TooltipProvider>
+          <Dock direction="middle" className="bg-white rounded-full">
+            {DATA.navbar.map((item) => (
+              <DockIcon key={item.label} className="hover:bg-gray-200">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      to={item.href}
+                      aria-label={item.label}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12 rounded-full"
+                      )}
+                      onClick={() => {
+                        // 如果是 Home，滚动到页面顶部
+                        if (item.href === "/") {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                      }}
+                    >
+                      <item.icon className="size-4" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
+            ))}
+            <Separator orientation="vertical" className="h-full" />
+            {Object.entries(DATA.contact.social).map(([name, social]) => (
+              <DockIcon key={name} className="hover:bg-gray-200">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      to={social.url}
+                      aria-label={social.name}
+                      className={cn(
+                        buttonVariants({ variant: "ghost", size: "icon" }),
+                        "size-12 rounded-full"
+                      )}
+                    >
+                      <social.icon className="size-4" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </DockIcon>
+            ))}
+            <Separator orientation="vertical" className="h-full py-2" />
+          </Dock>
+        </TooltipProvider>
+      </div>
+    );
+  }

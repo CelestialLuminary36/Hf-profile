@@ -1,13 +1,13 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import onePiece from "@/assets/images/onePiece.jpg";
-import naruto from "@/assets/images/naruto.jpg";
-import bleach from "@/assets/images/bleach.jpg";
-import whiteSnake from "@/assets/images/whiteSnake.jpg";
-import nazha from "@/assets/images/nazha.jpg";
-import fish from "@/assets/images/fish.jpg";
-import outCast from "@/assets/images/outCast.jpg";
-import degenerate from "@/assets/images/degenerate.jpg";
+import onePiece from "@/assets/images/films/onePiece.jpg";
+import naruto from "@/assets/images/films/naruto.jpg";
+import bleach from "@/assets/images/films/bleach.jpg";
+import whiteSnake from "@/assets/images/films/whiteSnake.jpg";
+import nazha from "@/assets/images/films/nazha.jpg";
+import fish from "@/assets/images/films/fish.jpg";
+import outCast from "@/assets/images/films/outCast.jpg";
+import degenerate from "@/assets/images/films/degenerate.jpg";
 
 const reviews = [
   {
