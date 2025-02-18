@@ -3,7 +3,6 @@ import {
   Route,
   createBrowserRouter,
   createRoutesFromElements,
-  Navigate,
 } from "react-router-dom";
 
 const MainRoute = () => {
