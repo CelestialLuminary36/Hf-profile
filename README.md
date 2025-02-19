@@ -7,6 +7,15 @@
 ![博客首页](./src/assets/blog-homepage.gif)  
 _动态展示博客首页_
 
+## 文章区
+
+未完成。
+
+## 博客地址
+
+你可以通过以下链接访问作者的博客：  
+[https://hf-profile.pages.dev/](https://hf-profile.pages.dev/)
+
 ## 技术栈
 
 - **React**：用于构建 UI。
@@ -23,5 +32,13 @@ _动态展示博客首页_
 ```bash
 git clone https://github.com/CelestialLuminary36/Hf-profile.git
 cd Hf-profile
-
+```
+### 2. 安装依赖
+```bash
 pnpm install
+```
+
+### 3. 运行
+```bash
+pnpm run dev
+```
