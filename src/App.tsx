@@ -1,25 +1,15 @@
-import './App.css'
-import { ButtomDock } from '@/components/docks/ButtomDock';
-import { FilmsComponent } from '@/components/films/Films';
-import { GamesComponent } from '@/components/games/Games';
-import { ProfilesComponent } from '@/components/profile/Profiles'
-import { ProjectsComponent } from '@/components/projects/Projects';
-import { SkillsComponent } from '@/components/skills/Skills'
-
+// App.tsx
+import './App.css';
+import { Outlet } from 'react-router-dom';
+import { ButtomDock } from './components/docks/ButtomDock';
 
 function App() {
   return (
-    <div className="bg-gray-100">
-      <ProfilesComponent />
-      <SkillsComponent />
-      <ProjectsComponent />
-      <GamesComponent />
-      <FilmsComponent />
+    <div className="bg-gray-100 min-h-screen flex flex-col">
+        <Outlet />
       <ButtomDock />
-      <div className='h-40'></div>
     </div>
   );
 }
 
-
-export default App
+export default App;
