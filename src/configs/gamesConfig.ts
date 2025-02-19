@@ -5,45 +5,45 @@
 export const game2DReviews = [
     {
       name: "Genshin Impact",
-      img: "/src/assets/images/games/Genshin_Impact.png",
+      img: "/games/Genshin_Impact.png",
     },
     {
       name: "Honkai: Star Rail",
-      img: "/src/assets/images/games/Honkai_Star_Rail.png",
+      img: "/games/Honkai_Star_Rail.png",
     },
     {
       name: "Zenless Zone Zero",
-      img: "/src/assets/images/games/Zenless_Zone_Zero.png",
+      img: "/games/Zenless_Zone_Zero.png",
     },
   ];
   
   export const gameOnlineReviews = [
     {
       name: "League of Legends",
-      img: "/src/assets/images/games/League_of_Legends.png",
+      img: "/games/League_of_Legends.png",
     },
     {
       name: "PUBG",
-      img: "/src/assets/svg/games/PUBG.svg",
+      img: "/games/PUBG.svg",
     },
     {
       name: "Counter-Strike: Global Offensive",
-      img: "/src/assets/images/games/Counter_Strike_Global_Offensive.png",
+      img: "/games/Counter_Strike_Global_Offensive.png",
     },
   ];
   
   export const gameSteamReviews = [
     {
       name: "Red Dead Redemption 2",
-      img: "/src/assets/images/games/Red_Dead_Redemption_2.jpg",
+      img: "/games/Red_Dead_Redemption_2.jpg",
     },
     {
       name: "NARAKA:BLADEPOINT",
-      img: "/src/assets/images/games/NARAKA_BLADEPOINT.webp",
+      img: "/games/NARAKA_BLADEPOINT.webp",
     },
     {
       name: "Overwatch",
-      img: "/src/assets/svg/games/Overwatch.svg",
+      img: "/games/Overwatch.svg",
     },
   ];
   
