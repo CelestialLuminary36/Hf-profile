@@ -50,15 +50,15 @@ export const game2DReviews = [
   export const gameMobileReviews = [
     {
       name: "Crossfire",
-      img: "/src/assets/images/games/Crossfire.png",
+      img: "/games/Crossfire.png",
     },
     {
       name: "League of Legends: Wild Rift",
-      img: "/src/assets/images/games/League_of_Legends_Wild_Rift.png",
+      img: "/games/League_of_Legends_Wild_Rift.png",
     },
     {
       name: "Naruto Mobile",
-      img: "/src/assets/images/games/Naruto_Mobile.jpg",
+      img: "/games/Naruto_Mobile.jpg",
     },
   ];
   
