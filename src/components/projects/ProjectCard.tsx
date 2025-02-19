@@ -7,13 +7,15 @@ interface ProjectCardProps {
   projectDescription: string;
   imagePath: string;
   projectLink: string;
+  githubLink: string;
 }
 
 export function ProjectCard({
   projectName,
   projectDescription,
   imagePath,
-  projectLink
+  projectLink,
+  githubLink
 }: ProjectCardProps) {
   return (
     <CardContainer className="inter-var">
@@ -62,8 +64,8 @@ export function ProjectCard({
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
-            <a href={projectLink} target="_blank" rel="noopener noreferrer">
-              Sign up
+            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+              Github
             </a>
           </CardItem>
         </div>

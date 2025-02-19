@@ -1,30 +1,27 @@
 
 import styled from "styled-components";
-import { WordRotate } from "../magicui/word-rotate";
+import { WordRotate } from "@/components/magicui/word-rotate";
+import { profileData } from "@/configs/profilesConfig"; // 引入配置文件
 
-const ProfileCard = () => {
+export const ProfileCard = ({ data = profileData }) => {
   return (
     <StyledWrapper>
       <article className="card">
         <div className="temporary_text">
           <WordRotate
             className="text-4xl font-bold dark:text-white"
-            words={["Hf", "三十六天罡啊"]}
+            words={data.rotateWords}
           />
         </div>
+
         <div className="card_content">
-          <span className="card_title text-2xl">Introduction</span>
-          <span className="card_subtitle">
-            互联网从业者，技术爱好者，游戏探索者
-          </span>
-          {/* <p className="card_description"> */}
+          <span className="card_title text-2xl">{data.title}</span>
+          <span className="card_subtitle">{data.subtitle}</span>
           <ul className="card_description list-disc pl-5 mt-3 space-y-2 text-left">
-            <li>职业: Java后端开发</li>
-            <li>兴趣: 探索新技术、游戏</li>
-            <li>目标: 独立开发，探索新技术</li>
-            <li>人格: INFJ</li>
+            {data.description.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
-          {/* </p> */}
         </div>
       </article>
     </StyledWrapper>
@@ -115,4 +112,3 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default ProfileCard;

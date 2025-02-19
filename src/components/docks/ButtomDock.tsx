@@ -63,29 +63,29 @@ const Icons = {
 
 const DATA = {
     navbar: [
-      { href: "/", icon: HomeIcon, label: "Home" },  // 首页路径
-      { href: "/blog", icon: PencilIcon, label: "Blog" },  // 博客页面路径
+      { href: "/", icon: HomeIcon, label: "Home" },
+      { href: "/blog", icon: PencilIcon, label: "Blog" },
     ],
     contact: {
       social: {
         GitHub: {
           name: "GitHub",
-          url: "https://github.com/CelestialLuminary36",  // GitHub 跳转 URL
+          url: "https://github.com/CelestialLuminary36",
           icon: Icons.github,
         },
         LinkedIn: {
           name: "LinkedIn",
-          url: "https://linkedin.com",  // LinkedIn 跳转 URL
+          url: "https://linkedin.com",
           icon: Icons.linkedin,
         },
         X: {
           name: "X",
-          url: "https://twitter.com",  // X (Twitter) 跳转 URL
+          url: "https://twitter.com",
           icon: Icons.x,
         },
         email: {
           name: "Send Email",
-          url: "mailto:example@example.com",  // 邮件链接
+          url: "mailto:example@example.com",
           icon: Icons.email,
         },
       },
@@ -109,7 +109,6 @@ const DATA = {
                         "size-12 rounded-full"
                       )}
                       onClick={() => {
-                        // 如果是 Home，滚动到页面顶部
                         if (item.href === "/") {
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }

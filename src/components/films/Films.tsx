@@ -1,60 +1,16 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import onePiece from "@/assets/images/films/onePiece.jpg";
-import naruto from "@/assets/images/films/naruto.jpg";
-import bleach from "@/assets/images/films/bleach.jpg";
-import whiteSnake from "@/assets/images/films/whiteSnake.jpg";
-import nazha from "@/assets/images/films/nazha.jpg";
-import fish from "@/assets/images/films/fish.jpg";
-import outCast from "@/assets/images/films/outCast.jpg";
-import degenerate from "@/assets/images/films/degenerate.jpg";
+import { films } from "@/configs/filmsConfig" 
 
-const reviews = [
-  {
-    name: "白蛇：缘起",
-    img: whiteSnake,
-  },
-  {
-    name: "哪吒之魔童闹海",
-    img: nazha,
-  },
-  {
-    name: "大鱼海棠",
-    img: fish,
-  },
-  {
-    name: "One Piece",
-    img: onePiece,
-  },
-  {
-    name: "Naruto",
-    img: naruto,
-  },
-  {
-    name: "Bleach",
-    img: bleach,
-  },
-  {
-    name: "一人之下",
-    img: outCast,
-  },
-  {
-    name: "画江湖之不良人",
-    img: degenerate,
-  },
-];
-
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = films.slice(0, films.length / 2);
+const secondRow = films.slice(films.length / 2);
 
 const ReviewCard = ({ img, name }: { img: string; name: string }) => {
   return (
     <figure
       className={cn(
         "relative h-full w-72 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
@@ -70,10 +26,9 @@ const ReviewCard = ({ img, name }: { img: string; name: string }) => {
   );
 };
 
-export function FilmTelevisionMarquee() {
+export function FilmsComponent() {
     return (
       <div className="w-3/5 mx-auto flex flex-col items-center justify-center bg-white p-10 rounded-2xl shadow-lg mt-40">
-        {/* "我看过的影视" 标题 */}
         <div className="bg-black rounded-3xl shadow-lg mb-8 p-2">
         <p className="text- font-bold text-center text-white">我看过的</p>
         </div>

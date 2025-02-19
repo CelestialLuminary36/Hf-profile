@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# Hf-profile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+这是一个由 [React](https://reactjs.org/) 和 [ShadCN](https://github.com/shadcn/ui) 打造的现代个人博客。
 
-Currently, two official plugins are available:
+## 项目展示
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![博客首页](./src/assets/blog-homepage.gif)  
+_动态展示博客首页_
 
-## Expanding the ESLint configuration
+## 技术栈
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**：用于构建 UI。
+- **ShadCN UI**：美观且易用的 UI 组件库。
+- **Vite**：快速构建和开发工具，提供优异的开发体验。
+- **React Router**：用于页面路由管理。
+- **Tailwind CSS**：快速构建自定义设计。
+- **TypeScript**：为 React 应用提供类型检查和更好的开发体验。
 
-- Configure the top-level `parserOptions` property like this:
+## 安装与运行
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 1. 克隆仓库
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```bash
+git clone https://github.com/CelestialLuminary36/Hf-profile.git
+cd Hf-profile
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+pnpm install

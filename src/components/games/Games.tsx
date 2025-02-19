@@ -1,82 +1,11 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
-import Genshin_Impact from "@/assets/images/games/Genshin_Impact.png";
-import Honkai_Star_Rail from "@/assets/images/games/Honkai_Star_Rail.png";
-import Zenless_Zone_Zero from "@/assets/images/games/Zenless_Zone_Zero.png";
-import League_of_Legends from "@/assets/images/games/League_of_Legends.png";
-import PUBG from "@/assets/svg/games/PUBG.svg";
-import Counter_Strike_Global_Offensive from "@/assets/images/games/Counter_Strike_Global_Offensive.png";
-import Red_Dead_Redemption_2 from "@/assets/images/games/Red_Dead_Redemption_2.jpg";
-import NARAKA_BLADEPOINT from "@/assets/images/games/NARAKA_BLADEPOINT.webp";
-import Overwatch from "@/assets/svg/games/Overwatch.svg";
-import Crossfire from "@/assets/images/games/Crossfire.png"
-import League_of_Legends_Wild_Rift from "@/assets/images/games/League_of_Legends_Wild_Rift.png"
-import Naruto_Mobile from "@/assets/images/games/Naruto_Mobile.jpg"
+import { game2DReviews, gameOnlineReviews, gameSteamReviews, gameMobileReviews} from "@/configs/gamesConfig"
 
-const game_2d_reviews = [
-  {
-    name: "Genshin Impact",
-    img: Genshin_Impact,
-  },
-  {
-    name: "Honkai: Star Rail",
-    img: Honkai_Star_Rail,
-  },
-  {
-    name: "Zenless Zone Zero",
-    img: Zenless_Zone_Zero,
-  },
-];
-
-const game_online_reviews = [
-  {
-    name: "League of Legends",
-    img: League_of_Legends,
-  },
-  {
-    name: "PUBG",
-    img: PUBG,
-  },
-  {
-    name: "Counter-Strike: Global Offensive",
-    img: Counter_Strike_Global_Offensive,
-  },
-];
-
-const game_other_reviews = [
-  {
-    name: "Red Dead Redemption 2",
-    img: Red_Dead_Redemption_2,
-  },
-  {
-    name: "NARAKA:BLADEPOINT",
-    img: NARAKA_BLADEPOINT,
-  },
-  {
-    name: "Overwatch",
-    img: Overwatch,
-  },
-];
-
-const game_mixed_reviews = [
-  {
-    name: "Crossfire",
-    img: Crossfire,
-  },
-  {
-    name: "League of Legends: Wild Rift",
-    img: League_of_Legends_Wild_Rift,
-  },
-  {
-    name: "Naruto Mobile",
-    img: Naruto_Mobile,
-  },
-];
-
-const firstRow = game_2d_reviews.slice(0, game_2d_reviews.length);
-const secondRow = game_online_reviews.slice(0, game_online_reviews.length);
-const thirdRow = game_other_reviews.slice(0, game_other_reviews.length);
-const fourthRow = game_mixed_reviews.slice(0, game_mixed_reviews.length);
+const firstRow = game2DReviews.slice(0, game2DReviews.length);
+const secondRow = gameOnlineReviews.slice(0, gameOnlineReviews.length);
+const thirdRow = gameSteamReviews.slice(0, gameSteamReviews.length);
+const fourthRow = gameMobileReviews.slice(0, gameMobileReviews.length);
 
 const ReviewCard = ({ img, name }: { img: string; name: string }) => {
   return (
@@ -101,7 +30,7 @@ const ReviewCard = ({ img, name }: { img: string; name: string }) => {
   );
 };
 
-export function GameMarquee3D() {
+export function GamesComponent() {
   return (
     <div className="w-2/4 mx-auto bg-white p-20 rounded-2xl shadow-lg mt-40 flex flex-col items-center">
       <div className="bg-black rounded-3xl shadow-lg mb-16 p-2">

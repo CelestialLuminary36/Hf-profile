@@ -1,8 +1,8 @@
-import { OrbitingCircles } from "../magicui/orbiting-circles";
-import ProfileCard from "./ProfileCard";
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import { ProfileCard } from "./ProfileCard";
 import avatar from "/avatar-modified.svg"
 
-export function OrbitingCirclesDemo() {
+export function ProfilesComponent() {
   return (
     <div className="relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden">
       <OrbitingCircles iconSize={50}>
