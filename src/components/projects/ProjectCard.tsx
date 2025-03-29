@@ -1,8 +1,10 @@
 "use client";
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectCardProps {
+  slug: string;
   projectName: string;
   projectDescription: string;
   imagePath: string;
@@ -11,12 +13,13 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({
+  slug,
   projectName,
   projectDescription,
   imagePath,
-  projectLink,
-  githubLink
+  githubLink,
 }: ProjectCardProps) {
+  const navigate = useNavigate();
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full max-w-[30rem] h-auto rounded-xl p-6 border">
@@ -54,9 +57,12 @@ export function ProjectCard({
             as="button"
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
           >
-            <a href={projectLink} target="_blank" rel="noopener noreferrer">
-              Try now →
-            </a>
+            <button
+              onClick={() => navigate(`/project/${slug}`)}
+              className="..."
+            >
+              Learn More →
+            </button>
           </CardItem>
           <CardItem
             translateZ={20}

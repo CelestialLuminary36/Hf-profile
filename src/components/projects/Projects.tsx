@@ -7,13 +7,14 @@ export function ProjectsComponent() {
     return (
       <div className="w-full sm:w-3/5 mx-auto flex flex-col items-center justify-center bg-white p-20 rounded-2xl shadow-lg my-40">
         <div className="bg-black rounded-3xl shadow-lg mb-8 p-2">
-          <p className="text-sm font-bold text-center text-white">我做过的</p>
+          <p className="text-sm font-bold text-center text-white">个人项目</p>
         </div>
   
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
           {projects.map((project, index) => (
             <div key={index} className="aspect-square">
               <ProjectCard
+                slug={project.slug}
                 projectName={project.projectName}
                 projectDescription={project.projectDescription}
                 imagePath={project.imagePath}

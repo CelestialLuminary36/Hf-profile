@@ -11,3 +11,12 @@
     z-index: 999; /* 确保它位于页面内容之上 */
   }
   
+/* 添加进度条动画 */
+@keyframes progress-load {
+  from { width: 0; }
+  to { width: var(--progress-width); }
+}
+
+.progress-bar {
+  animation: progress-load 1s ease-out forwards;
+}

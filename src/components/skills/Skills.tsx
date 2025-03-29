@@ -8,14 +8,15 @@ export function SkillsComponent() {
         <p className="text-sm font-bold text-center text-white">我掌握的</p>
         </div>
 
-      <BentoGrid className="max-w-4xl mx-auto">
+        <BentoGrid className="max-w-4xl mx-auto">
         {skills.map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
-            description={item.description}
+            description={item.description} // 可选保留
+            proficiency={item.proficiency} // 传递熟练度数值
             header={<Skeleton path={item.iconPath}/>}
-            className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} `}
+            className={`${i === 3 || i === 6 ? "md:col-span-2" : ""}`}
           />
         ))}
       </BentoGrid>

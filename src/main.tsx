@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'; // 导入 Provider
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import MainRoute from './routes/router';
-import store from './store/storatge'
+import store from './store/storage'
 
 const { router } = MainRoute();
 
